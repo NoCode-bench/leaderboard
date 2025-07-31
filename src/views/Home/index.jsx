@@ -205,7 +205,7 @@ const Index = ({leaderboard}) => {
                     <a href="https://github.com/ZJU-CTAG/nocode-bench-experiments" className="light-blue-link"
                        target="_blank"
                        rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', gap: '5px'}}>
-                        ZJU-CTAG/nocode-bench-experiments
+                        NoCode-bench/experiments
                     </a>
                     .
                     <br/>
