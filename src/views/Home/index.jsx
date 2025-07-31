@@ -116,10 +116,12 @@ const TableWrapper = () => {
                                         if (rank === 1) medal = ' 🥇'
                                         else if (rank === 2) medal = ' 🥈'
                                         else if (rank === 3) medal = ' 🥉'
+                                        let checked = ''
+                                        if (item.verified) checked = ' ✅'
 
                                         return (
                                             <tr key={index}>
-                                                <td>{medal || rank}</td>
+                                                <td>{medal || rank}{checked}</td>
                                                 <td>{item.method}</td>
                                                 <td>{item.model}</td>
                                                 <td>{item.resolved}</td>
