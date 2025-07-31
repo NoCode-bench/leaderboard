@@ -60,8 +60,8 @@ const TableWrapper = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const fullRes = await fetch('/leaderboard_data/full.json')
-            const verifiedRes = await fetch('/leaderboard_data/verified.json')
+            const fullRes = await fetch(`${process.env.PUBLIC_URL}/leaderboard_data/full.json`)
+            const verifiedRes = await fetch(`${process.env.PUBLIC_URL}/leaderboard_data/verified.json`)
             const fullData = await fullRes.json()
             const verifiedData = await verifiedRes.json()
 
