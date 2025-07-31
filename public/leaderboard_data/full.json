@@ -1,0 +1,26 @@
+[
+  {
+    "method": "Agentless",
+    "model": "Qwen3-235B-A22B (Thinking)",
+    "resolved": 3.94,
+    "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
+    "site": "https://github.com/OpenAutoCoder/Agentless",
+    "date": "2025-07-22"
+  },
+  {
+    "method": "Agentless",
+    "model": "GPT-4o-2024-11-20",
+    "resolved": 6.15,
+    "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
+    "site": "https://github.com/OpenAutoCoder/Agentless",
+    "date": "2025-07-22"
+  },
+  {
+    "method": "Agentless",
+    "model": "DeepSeek-v3-0324",
+    "resolved": 6.94,
+    "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
+    "site": "https://github.com/OpenAutoCoder/Agentless",
+    "date": "2025-07-22"
+  }
+]

@@ -1,0 +1,234 @@
+import {useEffect, useState} from 'react'
+import TaskImg from '../../assets/task.png'
+import './index.css'
+
+const descList = [
+    {
+        title: 'github',
+        href: 'https://github.com/ZJU-CTAG/NoCode-bench',
+        badge: 'https://img.shields.io/badge/GitHub-181717?logo=github&logoColor=white&style=for-the-badge'
+    },
+    {
+        title: 'arxiv',
+        href: 'https://arxiv.org/pdf/2507.18130',
+        badge: 'https://img.shields.io/badge/arXiv-900000?logo=arxiv&logoColor=white&style=for-the-badge'
+    },
+    {
+        title: 'huggingface',
+        href: 'https://huggingface.co/NoCode-bench',
+        badge: 'https://img.shields.io/badge/HuggingFace-FFD21E?logo=huggingface&logoColor=white&style=for-the-badge'
+    },
+    {
+        title: 'dockerhub',
+        href: '',
+        badge: 'https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=white&style=for-the-badge'
+    }
+]
+
+const Header = () => {
+    return (
+        <header>
+            <div className="title">NoCode-bench Leaderboard</div>
+            <div className="sub-title">A benchmark designed for no-code feature addition on real-world software
+                projects.
+            </div>
+            <div className="desc-list">
+                {
+                    descList.map((item, index) => {
+                        return <a className="desc-item" href={item.href} key={index} target="_blank" rel="noreferrer">
+                            <img src={item.badge} alt={item.title}/>
+                        </a>
+                    })
+                }
+            </div>
+        </header>
+    )
+}
+const Footer = () => {
+    return (
+        <footer>
+            <div>
+                made with 🥰 by <a href="http://www.icsoft.zju.edu.cn/" target="_blank" rel="noreferrer">ICSoft</a>
+            </div>
+        </footer>
+    )
+}
+
+const TableWrapper = () => {
+    const [activeBench, setActiveBench] = useState(0)
+    const [leaderboard, setLeaderboard] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const fullRes = await fetch('/leaderboard_data/full.json')
+            const verifiedRes = await fetch('/leaderboard_data/verified.json')
+            const fullData = await fullRes.json()
+            const verifiedData = await verifiedRes.json()
+
+            setLeaderboard([
+                { name: 'Verified', data: verifiedData },
+                { name: 'Full', data: fullData },
+            ])
+        }
+
+        fetchData()
+    }, [])
+
+    return (
+        <section>
+            <div className="table-wrapper">
+                <div className="table-title">
+                    <div className='section-title'>Leaderboard</div>
+                    <div className='bench-btns'>
+                        {
+                            leaderboard.map((item, index) => (
+                                <div
+                                    className={`bench-btn ${activeBench === index ? 'bench-btn__active' : ''}`}
+                                    key={index}
+                                    onClick={() => setActiveBench(index)}
+                                >
+                                    {item.name}
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+                <div className="table-container">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th>RANK</th>
+                            <th>METHOD</th>
+                            <th>MODEL</th>
+                            <th>%SUCCESS</th>
+                            <th>ORG</th>
+                            <th>DATE</th>
+                            <th>SITE</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {
+                            [...(leaderboard[activeBench]?.data || [])]
+                                .sort((a, b) => b.resolved - a.resolved)
+                                .map((item, index) => {
+                                    const rank = index + 1
+                                    let medal = ''
+                                    if (rank === 1) medal = ' 🥇'
+                                    else if (rank === 2) medal = ' 🥈'
+                                    else if (rank === 3) medal = ' 🥉'
+
+                                    return (
+                                        <tr key={index}>
+                                            <td>{rank}{medal}</td>
+                                            <td>{item.method}</td>
+                                            <td>{item.model}</td>
+                                            <td>{item.resolved}</td>
+                                            <td>
+                                                {
+                                                    item.org
+                                                        ? <img src={item.org} alt="org" style={{ width: '20px', height: '20px' }} />
+                                                        : '--'
+                                                }
+                                            </td>
+                                            <td>{item.date}</td>
+                                            <td>
+                                                {
+                                                    item.site
+                                                        ? <a
+                                                            href={item.site}
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            title={item.site}
+                                                            style={{ textDecoration: 'none' }}
+                                                        >
+                                                            🔗
+                                                        </a>
+                                                        : '--'
+                                                }
+                                            </td>
+                                        </tr>
+                                    )
+                                })
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    )
+}
+
+
+const SectionWrapper = ({title = '', subtitle = '', children}) => {
+    return (
+        <section className="section">
+            <div className="section-title-row">
+                <div className="section-title">{title}</div>
+                {subtitle && <div className="section-subtitle">{subtitle}</div>}
+            </div>
+            <div className="section-content">
+                {children}
+            </div>
+        </section>
+    )
+}
+
+const Index = ({leaderboard}) => {
+
+    return (
+        <>
+            {/* 头部信息区域 */}
+            <Header/>
+            <main>
+                {/* 表格区域 */}
+                <TableWrapper leaderboard={leaderboard}/>
+                {/* 信息区域 */}
+                <SectionWrapper title='Overview' subtitle='Introduction to NoCode-bench'>
+                    <div className='img-wrapper'>
+                        <img src={TaskImg} alt="task"/>
+                    </div>
+                    <p>NoCode-bench is a benchmark designed to evaluate the ability of Large Language Models (LLMs) to
+                        perform no-code feature addition using natural language documentation as input. Unlike prior
+                        benchmarks that focus on bug fixing or general issue resolution, NoCode-bench targets a new
+                        paradigm where feature development is driven by documentation changes in real-world software
+                        projects.</p>
+                    <p>Each instance takes user-facing documentation changes as input and expects the model to generate
+                        corresponding code changes. The implementation is validated using developer-written test
+                        cases.</p>
+                    <p></p>
+                </SectionWrapper>
+                <SectionWrapper title='How to submit?'>
+                    If you are interested in submitting your system or model to any of our leaderboards (NoCode-bench
+                    [Verified, Full]), please follow the instructions posted at&nbsp;
+                    <a href="https://github.com/ZJU-CTAG/nocode-bench-experiments" className="light-blue-link"
+                       target="_blank"
+                       rel="noopener noreferrer" style={{display: 'inline-flex', alignItems: 'center', gap: '5px'}}>
+                        ZJU-CTAG/nocode-bench-experiments
+                    </a>
+                    .
+                    <br/>
+                    <br/>
+                </SectionWrapper>
+                <SectionWrapper title='Citation'>
+                    If you found the <b>NoCode-bench</b> and <b>NoCode-bench Verified</b> helpful for your work, please cite as follows:
+                    <pre>
+                      <code>
+                        {`@misc{deng2025nocode,
+    title   = {NoCode-bench: A Benchmark for Evaluating Natural Language-Driven Feature Addition},
+    author  = {Deng Le and Jiang Zhonghao and Cao Jialun and Pradel Michael and Liu Zhongxin},
+    journal = {arXiv preprint arXiv:2507.18130},
+    year    = {2025}
+}`}
+                      </code>
+                    </pre>
+                    Correspondence to: <u>dengle@zju.edu.cn</u>, <u>liu_zx@zju.edu.cn</u> and <u>zhonghao.j@zju.edu.cn</u>
+                    <br/>
+                    <br/>
+                </SectionWrapper>
+            </main>
+            <Footer/>
+        </>
+    )
+}
+
+export default Index
