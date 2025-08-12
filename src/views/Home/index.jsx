@@ -185,6 +185,13 @@ const Index = ({leaderboard}) => {
                 {/* 表格区域 */}
                 <TableWrapper leaderboard={leaderboard}/>
                 {/* 信息区域 */}
+                <SectionWrapper title='News'>
+                    <ul>
+                        <li>
+                            <b>2025-07-22</b>: We have released NoCode-bench, evaluate your SE Agents on real-world no-code feature addition tasks here!
+                        </li>
+                    </ul>
+                </SectionWrapper>
                 <SectionWrapper title='Overview' subtitle='Introduction to NoCode-bench'>
                     <div className='img-wrapper'>
                         <img src={TaskImg} alt="task"/>

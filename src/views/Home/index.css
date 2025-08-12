@@ -123,6 +123,12 @@ section {
   color: #a1a2a3;
 }
 
+.section-content {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+
 .table-wrapper {
   width: 100%;
   padding: 15px;
