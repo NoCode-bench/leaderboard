@@ -2,7 +2,7 @@
   {
     "method": "OpenHands",
     "model": "Qwen3-235B-A22B (Thinking)",
-    "resolved": 5.26,
+    "resolved": 7.89,
     "org": "https://avatars.githubusercontent.com/u/169105795?s=200&v=4",
     "site": "https://all-hands.dev/",
     "date": "2025-07-22",
@@ -11,15 +11,6 @@
   {
     "method": "OpenHands",
     "model": "DeepSeek-R1-0528",
-    "resolved": 3.51,
-    "org": "https://avatars.githubusercontent.com/u/169105795?s=200&v=4",
-    "site": "https://all-hands.dev/",
-    "date": "2025-07-22",
-    "verified": true
-  },
-  {
-    "method": "OpenHands",
-    "model": "DeepSeek-v3-0324",
     "resolved": 7.02,
     "org": "https://avatars.githubusercontent.com/u/169105795?s=200&v=4",
     "site": "https://all-hands.dev/",
@@ -28,8 +19,17 @@
   },
   {
     "method": "OpenHands",
+    "model": "DeepSeek-v3-0324",
+    "resolved": 11.40,
+    "org": "https://avatars.githubusercontent.com/u/169105795?s=200&v=4",
+    "site": "https://all-hands.dev/",
+    "date": "2025-07-22",
+    "verified": true
+  },
+  {
+    "method": "OpenHands",
     "model": "GPT-4o-2024-11-20",
-    "resolved": 2.63,
+    "resolved": 5.26,
     "org": "https://avatars.githubusercontent.com/u/169105795?s=200&v=4",
     "site": "https://all-hands.dev/",
     "date": "2025-07-22",
@@ -47,7 +47,7 @@
   {
     "method": "OpenHands",
     "model": "Claude-4-Sonnet",
-    "resolved": 15.79,
+    "resolved": 25.44,
     "org": "https://avatars.githubusercontent.com/u/169105795?s=200&v=4",
     "site": "https://all-hands.dev/",
     "date": "2025-07-22",
@@ -56,7 +56,7 @@
     {
     "method": "Agentless",
     "model": "Qwen3-235B-A22B (Thinking)",
-    "resolved": 9.65,
+    "resolved": 13.16,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
     "date": "2025-07-22",
@@ -65,7 +65,7 @@
   {
     "method": "Agentless",
     "model": "DeepSeek-R1-0528",
-    "resolved": 11.40,
+    "resolved": 26.32,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
     "date": "2025-07-22",
@@ -74,7 +74,7 @@
   {
     "method": "Agentless",
     "model": "DeepSeek-v3-0324",
-    "resolved": 14.91,
+    "resolved": 21.93,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
     "date": "2025-07-22",
@@ -83,7 +83,7 @@
   {
     "method": "Agentless",
     "model": "GPT-4o-2024-11-20",
-    "resolved": 7.89,
+    "resolved": 13.16,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
     "date": "2025-07-22",
@@ -92,7 +92,7 @@
   {
     "method": "Agentless",
     "model": "Gemini-2.5-Pro",
-    "resolved": 8.77,
+    "resolved": 12.28,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
     "date": "2025-07-22",
@@ -101,10 +101,19 @@
   {
     "method": "Agentless",
     "model": "Claude-4-Sonnet",
-    "resolved": 15.79,
+    "resolved": 28.07,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
     "date": "2025-07-22",
+    "verified": true
+  },
+  {
+    "method": "Agentless",
+    "model": "GPT-5-Chat",
+    "resolved": 18.42,
+    "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
+    "site": "https://github.com/OpenAutoCoder/Agentless",
+    "date": "2025-08-09",
     "verified": true
   }
 ]
