@@ -65,7 +65,7 @@
   {
     "method": "Agentless",
     "model": "DeepSeek-R1-0528",
-    "resolved": 26.32,
+    "resolved": 25.44,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
     "date": "2025-07-22",
@@ -74,7 +74,7 @@
   {
     "method": "Agentless",
     "model": "DeepSeek-v3-0324",
-    "resolved": 21.93,
+    "resolved": 21.05,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
     "date": "2025-07-22",
