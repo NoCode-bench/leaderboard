@@ -25,5 +25,14 @@
     "site": "https://github.com/OpenAutoCoder/Agentless",
     "date": "2025-07-22",
     "verified": true
+  },
+  {
+    "method": "Agentless",
+    "model": "DeepSeek-R1-0528",
+    "resolved": 14.83,
+    "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
+    "site": "https://github.com/OpenAutoCoder/Agentless",
+    "date": "2025-08-15",
+    "verified": true
   }
 ]
