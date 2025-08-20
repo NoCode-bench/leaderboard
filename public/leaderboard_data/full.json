@@ -2,6 +2,7 @@
   {
     "method": "Agentless",
     "model": "Qwen3-235B-A22B (Thinking)",
+    "model_logo": "/model_logo/qwen.png",
     "resolved": 6.62,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
@@ -11,6 +12,7 @@
   {
     "method": "Agentless",
     "model": "GPT-4o-2024-11-20",
+    "model_logo": "/model_logo/OpenAI_logo_2025.svg",
     "resolved": 9.31,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
@@ -20,6 +22,7 @@
   {
     "method": "Agentless",
     "model": "DeepSeek-v3-0324",
+    "model_logo": "/model_logo/deepseek.png",
     "resolved": 11.83,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",
@@ -29,6 +32,7 @@
   {
     "method": "Agentless",
     "model": "DeepSeek-R1-0528",
+    "model_logo": "/model_logo/deepseek.png",
     "resolved": 14.83,
     "org": "https://brand.illinois.edu/wp-content/uploads/2024/02/Color-Variation-Orange-Block-I-White-Background.png",
     "site": "https://github.com/OpenAutoCoder/Agentless",

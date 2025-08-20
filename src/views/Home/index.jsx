@@ -128,6 +128,12 @@ const TableWrapper = () => {
                                                 <td>
                                                     {
                                                         item.org
+                                                            ? <img src={item.model_logo} alt="model_logo" style={{ width: '20px', height: '20px' }} />
+                                                            : '--'
+                                                    }
+                                                    &nbsp;&nbsp;&nbsp;
+                                                    {
+                                                        item.org
                                                             ? <img src={item.org} alt="org" style={{ width: '20px', height: '20px' }} />
                                                             : '--'
                                                     }
